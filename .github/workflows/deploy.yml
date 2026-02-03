@@ -7,8 +7,8 @@ on:
 
 env:
   AWS_REGION: us-east-1
-  ECR_REPOSITORY_BACKEND: industrial-attachment/backend
-  ECR_REPOSITORY_FRONTEND: industrial-attachment/frontend
+  ECR_REPOSITORY_BACKEND: industrial-attachment-backend
+  ECR_REPOSITORY_FRONTEND: industrial-attachment-frontend
 
 jobs:
   build-and-push:
