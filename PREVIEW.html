@@ -1,0 +1,1523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship & Attachment Opportunities - Find Your Perfect Placement</title>
+    <meta name="description" content="Connect with top companies in Kenya. Browse thousands of internship and industrial attachment opportunities. Simple, fast, and secure. Find both internships and attachments easily.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ===================================
+           THEME SYSTEM - CLEAN & SCALABLE
+           =================================== */
+        :root {
+            /* Light Mode Colors */
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
+            --bg-tertiary: #f1f5f9;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-tertiary: #64748b;
+            --border-color: #e2e8f0;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+            --accent-primary: #6366f1;
+            --accent-secondary: #8b5cf6;
+            --accent-hover: #4f46e5;
+            --card-bg: #ffffff;
+            --navbar-bg: rgba(255, 255, 255, 0.8);
+            --gradient-start: #6366f1;
+            --gradient-end: #8b5cf6;
+        }
+
+        [data-theme="dark"] {
+            /* Dark Mode Colors - True Dark with High Contrast */
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-tertiary: #334155;
+            --text-primary: #f1f5f9;
+            --text-secondary: #cbd5e1;
+            --text-tertiary: #94a3b8;
+            --border-color: #334155;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.5);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.3);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.4);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.5);
+            --accent-primary: #818cf8;
+            --accent-secondary: #a78bfa;
+            --accent-hover: #6366f1;
+            --card-bg: #1e293b;
+            --navbar-bg: rgba(15, 23, 42, 0.8);
+            --gradient-start: #6366f1;
+            --gradient-end: #8b5cf6;
+        }
+
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            transition: background-color 0.3s ease, color 0.3s ease;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom Scrollbar - Theme Aware */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-secondary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent-primary);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-hover);
+        }
+
+        /* ===================================
+           TYPOGRAPHY SYSTEM
+           =================================== */
+        .heading-hero {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        .heading-xl {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+        }
+
+        .heading-lg {
+            font-size: clamp(1.75rem, 3vw, 2.5rem);
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .heading-md {
+            font-size: clamp(1.25rem, 2vw, 1.875rem);
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .text-body-lg {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .text-body {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+        }
+
+        /* ===================================
+           ANIMATIONS
+           =================================== */
+        
+        /* Typewriter Effect - Theme Aware */
+        .typewriter h1 {
+            overflow: hidden;
+            border-right: 0.15em solid var(--accent-primary);
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: 0.05em;
+            animation: typing 2.5s steps(30, end), blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: var(--accent-primary); }
+        }
+
+        /* Blob Animation */
+        @keyframes blob {
+            0%, 100% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+        }
+
+        .animate-blob {
+            animation: blob 7s infinite;
+        }
+
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+
+        .animation-delay-4000 {
+            animation-delay: 4s;
+        }
+
+        /* Fade In Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        /* Float Animation */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* ===================================
+           COMPONENT STYLES
+           =================================== */
+
+        /* Card Component */
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 1rem;
+            padding: 2rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent-primary);
+        }
+
+        /* Feature Card */
+        .feature-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.875rem 2rem;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            border: none;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            color: white;
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: var(--card-bg);
+            color: var(--text-primary);
+            border: 2px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent-primary);
+            transform: translateY(-2px);
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: var(--text-primary);
+            border: 2px solid var(--border-color);
+        }
+
+        .btn-ghost:hover {
+            background: var(--bg-secondary);
+            border-color: var(--accent-primary);
+        }
+
+        /* Icon Button */
+        .icon-btn {
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0.75rem;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .icon-btn:hover {
+            background: var(--bg-secondary);
+            border-color: var(--accent-primary);
+            transform: translateY(-2px);
+        }
+
+        /* Gradient Text */
+        .gradient-text {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Badge */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        /* Navbar */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: var(--navbar-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        /* Section Spacing */
+        .section {
+            padding: 5rem 0;
+        }
+
+        @media (min-width: 768px) {
+            .section {
+                padding: 7rem 0;
+            }
+        }
+
+        /* Stats Counter */
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .stat-number {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Testimonial Card */
+        .testimonial-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 1.5rem;
+            padding: 3rem;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.3s ease;
+        }
+
+        /* Modal Backdrop */
+        .modal-backdrop {
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+
+        /* Form Elements - Theme Aware */
+        input, textarea {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+        }
+
+        /* Dark Mode Toggle Switch */
+        .theme-toggle {
+            position: relative;
+            width: 3.5rem;
+            height: 2rem;
+            background: var(--bg-secondary);
+            border: 2px solid var(--border-color);
+            border-radius: 9999px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .theme-toggle:hover {
+            border-color: var(--accent-primary);
+        }
+
+        .theme-toggle-slider {
+            position: absolute;
+            top: 0.125rem;
+            left: 0.125rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            background: var(--accent-primary);
+            border-radius: 9999px;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+        }
+
+        [data-theme="dark"] .theme-toggle-slider {
+            transform: translateX(1.5rem);
+        }
+
+        /* Responsive Utilities */
+        @media (max-width: 768px) {
+            .heading-hero {
+                font-size: 2.5rem;
+            }
+            
+            .section {
+                padding: 3rem 0;
+            }
+        }
+
+        /* Loading State */
+        .loading {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        /* Focus Visible - Accessibility */
+        *:focus-visible {
+            outline: 2px solid var(--accent-primary);
+            outline-offset: 2px;
+        }
+
+        /* Selection */
+        ::selection {
+            background: var(--accent-primary);
+            color: white;
+        }
+    </style>
+</head>
+<body id="app">
+    <!-- Navigation -->
+    <nav>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <span class="font-bold text-xl" style="color: var(--text-primary);">OpportunityHub</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#features" class="text-sm font-medium hover:opacity-70 transition-opacity" style="color: var(--text-secondary);">Features</a>
+                    <a href="#how-it-works" class="text-sm font-medium hover:opacity-70 transition-opacity" style="color: var(--text-secondary);">How It Works</a>
+                    <a href="#why-choose-us" class="text-sm font-medium hover:opacity-70 transition-opacity" style="color: var(--text-secondary);">Why Us</a>
+                    <a href="#pricing" class="text-sm font-medium hover:opacity-70 transition-opacity" style="color: var(--text-secondary);">Pricing</a>
+                </div>
+
+                <!-- Right Side Actions -->
+                <div class="flex items-center gap-3">
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                        <div class="theme-toggle-slider">
+                            <span id="theme-icon">🌙</span>
+                        </div>
+                    </button>
+
+                    <!-- Auth Buttons -->
+                    <div class="hidden sm:flex items-center gap-2">
+                        <a href="#" class="btn btn-ghost">Sign In</a>
+                        <a href="#" class="btn btn-primary">Get Started</a>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="md:hidden icon-btn">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t" style="border-color: var(--border-color);">
+            <div class="px-4 py-6 space-y-3">
+                <a href="#features" class="block py-2 text-sm font-medium" style="color: var(--text-secondary);">Features</a>
+                <a href="#how-it-works" class="block py-2 text-sm font-medium" style="color: var(--text-secondary);">How It Works</a>
+                <a href="#why-choose-us" class="block py-2 text-sm font-medium" style="color: var(--text-secondary);">Why Us</a>
+                <a href="#pricing" class="block py-2 text-sm font-medium" style="color: var(--text-secondary);">Pricing</a>
+                <div class="pt-4 space-y-2">
+                    <a href="#" class="btn btn-ghost w-full">Sign In</a>
+                    <a href="#" class="btn btn-primary w-full">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="section relative overflow-hidden">
+        <!-- Animated Background Blobs -->
+        <div class="absolute top-0 -left-4 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+        <div class="absolute top-0 -right-4 w-72 h-72 bg-indigo-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+        <div class="absolute -bottom-8 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-4xl mx-auto fade-in">
+                <!-- Badge -->
+                <div class="inline-flex items-center gap-2 mb-8">
+                    <span class="badge">
+                        <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                        Over 5,000 students placed
+                    </span>
+                </div>
+
+                <!-- Main Headline -->
+
+                <h1 class="heading-hero mb-6" style="color: var(--text-primary);">
+                    Find Your Perfect
+                    <span class="typewriter">
+                        <h1 class="gradient-text inline-block">Internship &amp; Attachment</h1>
+                    </span>
+                </h1>
+
+                <!-- Subheadline -->
+                <p class="text-body-lg max-w-3xl mx-auto mb-10">
+                    Connect with top companies across Kenya. Browse thousands of verified <b>internship</b> and <b>industrial attachment</b> opportunities. Simple application process, secure payments, instant updates. Whether you need an internship or an attachment, we have you covered.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+                    <a href="#" class="btn btn-primary group">
+                        <span>Start Your Journey</span>
+                        <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
+                    </a>
+                    <a href="#how-it-works" class="btn btn-secondary group">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span>Watch Demo</span>
+                    </a>
+                </div>
+
+                <!-- Trust Indicators -->
+                <div class="flex flex-wrap items-center justify-center gap-8 opacity-60">
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span class="text-sm font-medium" style="color: var(--text-secondary);">Free to sign up</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span class="text-sm font-medium" style="color: var(--text-secondary);">Verified companies</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span class="text-sm font-medium" style="color: var(--text-secondary);">Instant notifications</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section style="background: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="stat-item">
+                    <div class="stat-number">5,000+</div>
+                    <p class="text-body" style="color: var(--text-secondary);">Students Placed</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <p class="text-body" style="color: var(--text-secondary);">Partner Companies</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">95%</div>
+                    <p class="text-body" style="color: var(--text-secondary);">Success Rate</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <p class="text-body" style="color: var(--text-secondary);">Support Available</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="heading-xl mb-4" style="color: var(--text-primary);">Everything You Need to Succeed</h2>
+                <p class="text-body-lg">Powerful features designed to make your <b>internship</b> and <b>attachment</b> search effortless and successful</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature Card 1 -->
+                <div class="card feature-card">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="heading-md mb-3" style="color: var(--text-primary);">Smart Search</h3>
+                    <p class="text-body">Advanced filters to find <b>internship</b> and <b>attachment</b> opportunities that match your skills, location, and career goals perfectly.</p>
+                </div>
+
+                <!-- Feature Card 2 -->
+                <div class="card feature-card">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <h3 class="heading-md mb-3" style="color: var(--text-primary);">Verified Companies</h3>
+                    <p class="text-body">Every company is thoroughly vetted to ensure you're applying to legitimate, reputable organizations.</p>
+                </div>
+
+                <!-- Feature Card 3 -->
+                <div class="card feature-card">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="heading-md mb-3" style="color: var(--text-primary);">Instant Apply</h3>
+                    <p class="text-body">Apply to multiple <b>internship</b> and <b>attachment</b> positions with one click using your saved profile and documents.</p>
+                </div>
+
+                <!-- Feature Card 4 -->
+                <div class="card feature-card">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-yellow-500 to-orange-600 flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+                        </svg>
+                    </div>
+                    <h3 class="heading-md mb-3" style="color: var(--text-primary);">Real-Time Alerts</h3>
+                    <p class="text-body">Get instant notifications when companies view your profile or update your application status.</p>
+                </div>
+
+                <!-- Feature Card 5 -->
+                <div class="card feature-card">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="heading-md mb-3" style="color: var(--text-primary);">Career Analytics</h3>
+                    <p class="text-body">Track your applications, see which companies are interested, and optimize your profile for success.</p>
+                </div>
+
+                <!-- Feature Card 6 -->
+                <div class="card feature-card">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/>
+                        </svg>
+                    </div>
+                    <h3 class="heading-md mb-3" style="color: var(--text-primary);">24/7 Support</h3>
+                    <p class="text-body">Our dedicated support team is always available to help you with any questions or concerns.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="section" style="background: var(--bg-secondary);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="heading-xl mb-4" style="color: var(--text-primary);">Get Started in Minutes</h2>
+                <p class="text-body-lg">Simple, straightforward process from signup to placement</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="relative inline-block mb-6">
+                        <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center mx-auto shadow-lg">
+                            <span class="text-3xl font-bold text-white">1</span>
+                        </div>
+                        <div class="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="heading-md mb-3" style="color: var(--text-primary);">Create Your Profile</h3>
+                    <p class="text-body">Sign up in seconds and build your professional profile with your skills, education, and experience.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="relative inline-block mb-6">
+                        <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center mx-auto shadow-lg">
+                            <span class="text-3xl font-bold text-white">2</span>
+                        </div>
+                        <div class="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="heading-md mb-3" style="color: var(--text-primary);">Browse & Apply</h3>
+                    <p class="text-body">Search thousands of verified opportunities and apply to multiple positions with one click.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="relative inline-block mb-6">
+                        <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center mx-auto shadow-lg">
+                            <span class="text-3xl font-bold text-white">3</span>
+                        </div>
+                        <div class="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="heading-md mb-3" style="color: var(--text-primary);">Get Hired</h3>
+                    <p class="text-body">Receive instant updates, connect with employers, and start your dream <b>internship</b> or <b>attachment</b>.</p>
+                </div>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="text-center mt-16">
+                <a href="#" class="btn btn-primary btn-lg group">
+                    <span>Start Your Free Account</span>
+                    <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-choose-us" class="section" style="background: var(--bg-secondary);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="heading-xl mb-4" style="color: var(--text-primary);">Why Students Choose Us</h2>
+                <p class="text-body-lg">We're the most trusted platform for <b>internships</b> and <b>industrial attachments</b> in Kenya</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Reason 1 -->
+                <div class="card text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <h3 class="heading-md mb-2" style="color: var(--text-primary);">100% Verified</h3>
+                    <p class="text-body text-sm">Every company is thoroughly vetted. No scams, only legitimate opportunities.</p>
+                </div>
+
+                <!-- Reason 2 -->
+                <div class="card text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="heading-md mb-2" style="color: var(--text-primary);">Lightning Fast</h3>
+                    <p class="text-body text-sm">Apply in seconds with your saved profile. Get responses within 24-48 hours.</p>
+                </div>
+
+                <!-- Reason 3 -->
+                <div class="card text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="heading-md mb-2" style="color: var(--text-primary);">Best Value</h3>
+                    <p class="text-body text-sm">Only KSh 329 per application. No subscriptions, no hidden fees.</p>
+                </div>
+
+                <!-- Reason 4 -->
+                <div class="card text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="heading-md mb-2" style="color: var(--text-primary);">24/7 Support</h3>
+                    <p class="text-body text-sm">Real humans ready to help. Chat, email, or phone support anytime.</p>
+                </div>
+            </div>
+
+            <!-- Additional Trust Elements -->
+            <div class="mt-16 grid md:grid-cols-3 gap-8 text-center">
+                <div>
+                    <div class="text-4xl mb-2">🔒</div>
+                    <h4 class="font-semibold mb-1" style="color: var(--text-primary);">Secure Payments</h4>
+                    <p class="text-body text-sm">SSL encrypted. Your data is safe with us.</p>
+                </div>
+                <div>
+                    <div class="text-4xl mb-2">⚡</div>
+                    <h4 class="font-semibold mb-1" style="color: var(--text-primary);">Instant Updates</h4>
+                    <p class="text-body text-sm">Real-time notifications via SMS and email.</p>
+                </div>
+                <div>
+                    <div class="text-4xl mb-2">🎯</div>
+                    <h4 class="font-semibold mb-1" style="color: var(--text-primary);">95% Success Rate</h4>
+                    <p class="text-body text-sm">Most students get placed within 2 weeks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted Companies Section -->
+    <section class="py-12" style="border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <p class="text-sm font-semibold uppercase tracking-wide" style="color: var(--text-tertiary);">Trusted by Top Companies</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center opacity-60">
+                <!-- Company Logo Placeholders -->
+                <div class="flex items-center justify-center">
+                    <div class="text-2xl font-bold" style="color: var(--text-secondary);">Safaricom</div>
+                </div>
+                <div class="flex items-center justify-center">
+                    <div class="text-2xl font-bold" style="color: var(--text-secondary);">Equity Bank</div>
+                </div>
+                <div class="flex items-center justify-center">
+                    <div class="text-2xl font-bold" style="color: var(--text-secondary);">KCB Group</div>
+                </div>
+                <div class="flex items-center justify-center">
+                    <div class="text-2xl font-bold" style="color: var(--text-secondary);">KPLC</div>
+                </div>
+                <div class="flex items-center justify-center">
+                    <div class="text-2xl font-bold" style="color: var(--text-secondary);">Co-op Bank</div>
+                </div>
+                <div class="flex items-center justify-center">
+                    <div class="text-2xl font-bold" style="color: var(--text-secondary);">Airtel Kenya</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section - Simplified -->
+    <section id="pricing" class="section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="heading-xl mb-4" style="color: var(--text-primary);">Simple, Fair Pricing</h2>
+                <p class="text-body-lg">Browse thousands of <b>internship</b> and <b>attachment</b> opportunities for free. Pay only when you're ready to apply.</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <!-- Main Pricing Card -->
+                <div class="card" style="border: 2px solid var(--accent-primary);">
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <!-- Left Side - Pricing -->
+                        <div class="text-center md:text-left">
+                            <div class="inline-block mb-4">
+                                <span class="badge" style="background: var(--accent-primary); color: white; border: none;">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                    Most Popular Choice
+                                </span>
+                            </div>
+                            <h3 class="heading-lg mb-2" style="color: var(--text-primary);">Pay Per Application</h3>
+                            <div class="mb-6">
+                                <span class="text-6xl font-bold gradient-text">KSh 329</span>
+                                <span class="text-body-lg">/application</span>
+                            </div>
+                            <p class="text-body mb-6">
+                                Only charged when you submit an application. Browse and search <b>internship</b> and <b>attachment</b> opportunities completely free!
+                            </p>
+                            <a href="#" class="btn btn-primary">
+                                <span>Start Browsing Free</span>
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <!-- Right Side - What's Included -->
+                        <div>
+                            <h4 class="font-semibold mb-4 text-lg" style="color: var(--text-primary);">What's Included:</h4>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-3">
+                                    <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                    <span class="text-body">Direct application to company</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                    <span class="text-body">Application tracking & updates</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                    <span class="text-body">SMS & email notifications</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                    <span class="text-body">Priority support access</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                    <span class="text-body">Secure M-Pesa payment</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                    <span class="text-body">Application receipt & confirmation</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Free Features Below -->
+                <div class="mt-8 p-6 rounded-xl" style="background: var(--bg-secondary); border: 1px solid var(--border-color);">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2" style="color: var(--text-primary);">Always Free:</h4>
+                            <p class="text-body text-sm">Create account • Browse all <b>internship</b> and <b>attachment</b> opportunities • Build your profile • Save favorites • Get job alerts • Company research</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Info -->
+                <div class="mt-8 text-center">
+                    <p class="text-sm" style="color: var(--text-tertiary);">
+                        <svg class="w-4 h-4 inline text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        You'll only be prompted to pay when you click "Submit Application"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="heading-xl mb-4" style="color: var(--text-primary);">Frequently Asked Questions</h2>
+                <p class="text-body-lg">Everything you need to know about <b>internships</b> and <b>attachments</b> on the platform</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="card">
+                    <button class="faq-question w-full text-left flex items-center justify-between" onclick="toggleFAQ(this)">
+                        <span class="font-semibold text-lg" style="color: var(--text-primary);">When do I pay the KSh 329 application fee?</span>
+                        <svg class="w-6 h-6 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--text-secondary);">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden mt-4 text-body">
+                        <p>You'll only be charged when you click the "Submit Application" button. Before that, you can browse, search, save favorites, and prepare your application completely free. The payment prompt appears only at the final submission step.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="card">
+                    <button class="faq-question w-full text-left flex items-center justify-between" onclick="toggleFAQ(this)">
+                        <span class="font-semibold text-lg" style="color: var(--text-primary);">What payment methods do you accept?</span>
+                        <svg class="w-6 h-6 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--text-secondary);">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden mt-4 text-body">
+                        <p>We accept M-Pesa payments for maximum convenience. Simply enter your M-Pesa number, you'll receive a prompt on your phone, enter your PIN, and your application is instantly submitted. We also accept card payments and bank transfers.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="card">
+                    <button class="faq-question w-full text-left flex items-center justify-between" onclick="toggleFAQ(this)">
+                        <span class="font-semibold text-lg" style="color: var(--text-primary);">Are all companies on the platform verified?</span>
+                        <svg class="w-6 h-6 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--text-secondary);">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden mt-4 text-body">
+                        <p>Yes! Every company goes through our rigorous verification process. We check business registration documents, physical addresses, and conduct background checks. Only legitimate, registered companies can post opportunities on our platform.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="card">
+                    <button class="faq-question w-full text-left flex items-center justify-between" onclick="toggleFAQ(this)">
+                        <span class="font-semibold text-lg" style="color: var(--text-primary);">How long does it take to hear back from companies?</span>
+                        <svg class="w-6 h-6 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--text-secondary);">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden mt-4 text-body">
+                        <p>Most companies respond within 24-48 hours. You'll receive real-time notifications via SMS and email whenever there's an update on your application. Our platform ensures companies are prompt in their responses.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="card">
+                    <button class="faq-question w-full text-left flex items-center justify-between" onclick="toggleFAQ(this)">
+                        <span class="font-semibold text-lg" style="color: var(--text-primary);">Can I apply to multiple positions?</span>
+                        <svg class="w-6 h-6 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--text-secondary);">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden mt-4 text-body">
+                        <p>Absolutely! You pay KSh 329 per application, so you can apply to as many positions as you want. Your profile and documents are saved, making subsequent applications even faster.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="card">
+                    <button class="faq-question w-full text-left flex items-center justify-between" onclick="toggleFAQ(this)">
+                        <span class="font-semibold text-lg" style="color: var(--text-primary);">What if I don't get the internship or attachment after paying?</span>
+                        <svg class="w-6 h-6 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--text-secondary);">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden mt-4 text-body">
+                        <p>The KSh 329 fee covers the application submission and processing, not a guaranteed placement. However, with a 95% success rate and access to hundreds of <b>internship</b> and <b>attachment</b> opportunities, most students secure positions within 2 weeks. We provide full application tracking and support throughout your search.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 7 -->
+                <div class="card">
+                    <button class="faq-question w-full text-left flex items-center justify-between" onclick="toggleFAQ(this)">
+                        <span class="font-semibold text-lg" style="color: var(--text-primary);">Is my personal information secure?</span>
+                        <svg class="w-6 h-6 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--text-secondary);">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden mt-4 text-body">
+                        <p>Yes! We use bank-grade SSL encryption to protect all your data. Your information is only shared with companies you choose to apply to. We never sell your data to third parties, and all payments are processed through secure, PCI-compliant gateways.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Still Have Questions CTA -->
+            <div class="mt-12 text-center">
+                <p class="text-body mb-4">Still have questions?</p>
+                <button onclick="openContactModal()" class="btn btn-secondary">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+                    </svg>
+                    <span>Contact Support</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="heading-xl mb-4 text-white">Success Stories</h2>
+                <p class="text-body-lg text-white/90 max-w-2xl mx-auto">
+                    Real stories from students who found their dream <b>internships</b> and <b>attachments</b>
+                </p>
+            </div>
+
+            <!-- Testimonial Slider -->
+            <div class="max-w-4xl mx-auto">
+                <div class="testimonial-card">
+                    <div id="testimonial-content">
+                        <!-- Content injected by JavaScript -->
+                    </div>
+                    
+                    <!-- Navigation Dots -->
+                    <div class="flex justify-center gap-2 mt-8" id="testimonial-dots">
+                        <!-- Dots injected by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="section relative overflow-hidden" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+        </div>
+
+        <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="heading-hero text-white mb-6">
+                    Ready to Launch Your Career?
+                </h2>
+                <p class="text-body-lg text-white/90 mb-10 leading-relaxed max-w-2xl mx-auto">
+                    Join 5,000+ students who secured their dream <b>internships</b> and <b>attachments</b>. Create your free account and start applying in minutes!
+                </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+                <a href="#" class="btn btn-primary group" style="background: white; color: var(--gradient-start);">
+                    <span>Get Started Free</span>
+                    <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                    </svg>
+                </a>
+                <a href="#" class="btn" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid rgba(255,255,255,0.3);">
+                    View All Opportunities
+                </a>
+            </div>
+
+            <!-- Trust Badge -->
+            <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20">
+                <svg class="w-5 h-5 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span class="text-sm font-medium text-white">Free to sign up • No credit card required • Pay only when you apply</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: var(--bg-secondary); border-top: 1px solid var(--border-color);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <span class="font-bold text-xl" style="color: var(--text-primary);">OpportunityHub</span>
+                    </div>
+                    <p class="text-body text-sm">Connecting students with their dream <b>internships</b> and <b>attachments</b> across Kenya.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4" style="color: var(--text-primary);">Product</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:opacity-70 transition-opacity" style="color: var(--text-secondary);">Features</a></li>
+                        <li><a href="#" class="hover:opacity-70 transition-opacity" style="color: var(--text-secondary);">Pricing</a></li>
+                        <li><a href="#" class="hover:opacity-70 transition-opacity" style="color: var(--text-secondary);">How It Works</a></li>
+                        <li><a href="#" class="hover:opacity-70 transition-opacity" style="color: var(--text-secondary);">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4" style="color: var(--text-primary);">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:opacity-70 transition-opacity" style="color: var(--text-secondary);">About Us</a></li>
+                        <li><a href="#" class="hover:opacity-70 transition-opacity" style="color: var(--text-secondary);">Careers</a></li>
+                        <li><a href="#" class="hover:opacity-70 transition-opacity" style="color: var(--text-secondary);">Blog</a></li>
+                        <li><a href="#" class="hover:opacity-70 transition-opacity" style="color: var(--text-secondary);">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4" style="color: var(--text-primary);">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:opacity-70 transition-opacity" style="color: var(--text-secondary);">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:opacity-70 transition-opacity" style="color: var(--text-secondary);">Terms of Service</a></li>
+                        <li><a href="#" class="hover:opacity-70 transition-opacity" style="color: var(--text-secondary);">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t text-center text-sm" style="border-color: var(--border-color); color: var(--text-tertiary);">
+                <p>&copy; 2026 OpportunityHub. All rights reserved. Made with ❤️ in Kenya.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Contact Button -->
+    <button onclick="openContactModal()" class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full shadow-xl flex items-center justify-center transition-all hover:scale-110" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+        </svg>
+    </button>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 modal-backdrop" style="background: rgba(0,0,0,0.5);">
+        <div class="card max-w-md w-full relative animate-float">
+            <button onclick="closeContactModal()" class="absolute top-4 right-4 w-8 h-8 rounded-lg flex items-center justify-center transition-colors" style="color: var(--text-tertiary); background: var(--bg-secondary);">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+            
+            <h3 class="heading-md mb-2" style="color: var(--text-primary);">Contact Us</h3>
+            <p class="text-body mb-6">Have questions? We're here to help!</p>
+            
+            <form onsubmit="handleContactSubmit(event)">
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium mb-2" style="color: var(--text-primary);">Name</label>
+                        <input type="text" required class="w-full px-4 py-3 rounded-lg text-sm" placeholder="Your name">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2" style="color: var(--text-primary);">Email</label>
+                        <input type="email" required class="w-full px-4 py-3 rounded-lg text-sm" placeholder="you@example.com">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2" style="color: var(--text-primary);">Message</label>
+                        <textarea required rows="4" class="w-full px-4 py-3 rounded-lg text-sm" placeholder="How can we help?"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary w-full mt-6">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Preview Banner -->
+    <div class="fixed bottom-0 left-0 right-0 py-3 px-4 text-center text-sm font-medium text-white z-40" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));">
+        🎨 Preview Mode: This is your NEW landing page! • Scroll to see all sections
+    </div>
+
+    <script>
+        /* ===================================
+           THEME SYSTEM - CLEAN IMPLEMENTATION
+           =================================== */
+        
+        // Initialize theme from localStorage or system preference
+        function initTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+            
+            setTheme(theme);
+        }
+
+        // Set theme and update UI
+        function setTheme(theme) {
+            const html = document.documentElement;
+            const icon = document.getElementById('theme-icon');
+            
+            if (theme === 'dark') {
+                html.setAttribute('data-theme', 'dark');
+                icon.textContent = '☀️';
+            } else {
+                html.removeAttribute('data-theme');
+                icon.textContent = '🌙';
+            }
+            
+            localStorage.setItem('theme', theme);
+        }
+
+        // Toggle theme
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            setTheme(newTheme);
+        }
+
+        // Theme toggle button event listener
+        document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+
+        // Initialize theme on page load
+        initTheme();
+
+        /* ===================================
+           MOBILE MENU
+           =================================== */
+        
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking nav links
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        /* ===================================
+           TESTIMONIALS SLIDER
+           =================================== */
+        
+        const testimonials = [
+            {
+                name: "Sarah Kamau",
+                role: "Computer Science Student, UoN",
+                img: "https://ui-avatars.com/api/?name=Sarah+Kamau&background=6366f1&color=fff&size=64",
+                text: "I found my dream internship at Safaricom through this platform! The application process was smooth and professional. Highly recommend!",
+                stars: 5
+            },
+            {
+                name: "Brian Otieno",
+                role: "Electrical Engineering, KU",
+                img: "https://ui-avatars.com/api/?name=Brian+Otieno&background=6366f1&color=fff&size=64",
+                text: "Secured my attachment at Kenya Power. The system is easy to use and the support team is amazing!",
+                stars: 5
+            },
+            {
+                name: "Faith Mwangi",
+                role: "Business Student, Strathmore",
+                img: "https://ui-avatars.com/api/?name=Faith+Mwangi&background=6366f1&color=fff&size=64",
+                text: "Applied to three companies in one day and got accepted for an internship at Equity Bank. Super fast and reliable.",
+                stars: 5
+            },
+            {
+                name: "Kevin Mutua",
+                role: "IT Student, JKUAT",
+                img: "https://ui-avatars.com/api/?name=Kevin+Mutua&background=6366f1&color=fff&size=64",
+                text: "The attachment process was seamless. I loved the instant updates and easy payments.",
+                stars: 5
+            }
+        ];
+
+        let currentTestimonialIndex = 0;
+
+        function renderTestimonial(index) {
+            const testimonial = testimonials[index];
+            const stars = Array(testimonial.stars).fill('').map(() => 
+                `<svg class="w-6 h-6 text-yellow-400 fill-current inline" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>`
+            ).join('');
+
+            document.getElementById('testimonial-content').innerHTML = `
+                <div class="flex mb-6">${stars}</div>
+                <p class="text-xl md:text-2xl mb-8 leading-relaxed" style="color: var(--text-secondary);">"${testimonial.text}"</p>
+                <div class="flex items-center gap-4">
+                    <img src="${testimonial.img}" alt="${testimonial.name}" class="w-16 h-16 rounded-full border-2" style="border-color: var(--border-color);">
+                    <div>
+                        <div class="font-bold text-lg" style="color: var(--text-primary);">${testimonial.name}</div>
+                        <div class="text-sm" style="color: var(--text-secondary);">${testimonial.role}</div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderDots() {
+            const dotsHTML = testimonials.map((_, index) => {
+                const isActive = index === currentTestimonialIndex;
+                const bgColor = isActive ? 'var(--accent-primary)' : 'var(--border-color)';
+                return `<button onclick="showTestimonial(${index})" class="w-3 h-3 rounded-full transition-all" style="background: ${bgColor};"></button>`;
+            }).join('');
+            
+            document.getElementById('testimonial-dots').innerHTML = dotsHTML;
+        }
+
+        function showTestimonial(index) {
+            currentTestimonialIndex = index;
+            renderTestimonial(index);
+            renderDots();
+        }
+
+        // Auto-rotate testimonials
+        setInterval(() => {
+            currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
+            showTestimonial(currentTestimonialIndex);
+        }, 5000);
+
+        // Initialize testimonials
+        document.addEventListener('DOMContentLoaded', function() {
+            renderTestimonial(0);
+            renderDots();
+        });
+
+        /* ===================================
+           CONTACT MODAL
+           =================================== */
+        
+        function openContactModal() {
+            document.getElementById('contact-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeContactModal() {
+            document.getElementById('contact-modal').classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            closeContactModal();
+            alert('Thank you for contacting us! We\'ll get back to you soon.');
+            event.target.reset();
+        }
+
+        // Close modal when clicking backdrop
+        document.getElementById('contact-modal').addEventListener('click', function(event) {
+            if (event.target === this) {
+                closeContactModal();
+            }
+        });
+
+        /* ===================================
+           FAQ ACCORDION
+           =================================== */
+        
+        function toggleFAQ(button) {
+            const answer = button.nextElementSibling;
+            const icon = button.querySelector('svg');
+            const allAnswers = document.querySelectorAll('.faq-answer');
+            const allIcons = document.querySelectorAll('.faq-question svg');
+            
+            // Close all other FAQs
+            allAnswers.forEach(item => {
+                if (item !== answer) {
+                    item.classList.add('hidden');
+                }
+            });
+            
+            // Reset all other icons
+            allIcons.forEach(item => {
+                if (item !== icon) {
+                    item.style.transform = 'rotate(0deg)';
+                }
+            });
+            
+            // Toggle current FAQ
+            answer.classList.toggle('hidden');
+            
+            // Rotate icon
+            if (answer.classList.contains('hidden')) {
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        /* ===================================
+           SMOOTH SCROLL & ANIMATIONS
+           =================================== */
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Scroll-triggered animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
