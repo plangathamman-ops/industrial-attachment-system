@@ -110,7 +110,7 @@ docker run -d -p 3000:80 my-frontend
 ## ☸️ Kubernetes Deployment
 
 ### Prerequisites
-- Kubernetes cluster (Minikube, EKS, GKE, AKS, etc.)
+- Kubernetes cluster (optional: Minikube, GKE, AKS, etc.)
 - kubectl installed
 - Docker registry access
 

@@ -10,6 +10,11 @@ const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  // Hide navbar on home page as Home.jsx has its own navbar
+  if (location.pathname === '/') {
+    return null;
+  }
+
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
@@ -44,10 +49,7 @@ const Navbar = () => {
               </div>
               <div className="hidden sm:block">
                 <div className="text-xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                  IAS
-                </div>
-                <div className="text-xs text-gray-500 -mt-1">
-                  Industrial Attachment
+                  OpportunityHub
                 </div>
               </div>
             </Link>

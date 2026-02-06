@@ -95,7 +95,7 @@ Repository 1: industrial-attachment-system/
 Repository 2: industrial-attachment-helm-charts/  ✅ SEPARATE
 ├── charts/                          ✅ Helm charts
 ├── environments/                    ✅ Environment configs
-└── argocd/                          ✅ ArgoCD apps
+└── (infrastructure files)           ✅ Infra files
 ```
 
 ---
@@ -200,7 +200,6 @@ cd industrial-attachment-system
 | React | 18.2 | 18.2 |
 | Kubernetes | 1.25+ | 1.27+ |
 | Helm | N/A | 3.12+ |
-| ArgoCD | N/A | 2.9+ |
 
 ---
 
