@@ -28,8 +28,9 @@ const userSchema = new mongoose.Schema({
   },
   phoneNumber: {
     type: String,
-    required: [true, 'Phone number is required'],
-    match: [/^254[0-9]{9}$/, 'Phone number must be in format 254XXXXXXXXX']
+    required: false,
+    match: [/^254[0-9]{9}$/, 'Phone number must be in format 254XXXXXXXXX'],
+    sparse: true
   },
   role: {
     type: String,

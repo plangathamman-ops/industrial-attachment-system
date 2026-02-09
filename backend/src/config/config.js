@@ -34,7 +34,7 @@ module.exports = {
   },
   
   // Application Fee
-  applicationFee: 500,
+  applicationFee: 350,
   
   // Environment
   nodeEnv: process.env.NODE_ENV || 'development'

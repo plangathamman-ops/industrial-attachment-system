@@ -300,92 +300,28 @@ aws s3 ls s3://opportunityhub-frontend-prod --recursive
 
 ### Step 3.5: Create CloudFront Distribution
 
-```bash
-# Save this configuration
-cat > cloudfront-config.json << 'EOF'
-{
-  "CallerReference": "opportunityhub-$(date +%s)",
-  "Comment": "OpportunityHub Frontend",
-  "Enabled": true,
-  "Origins": {
-    "Items": [
-      {
-        "Id": "S3Origin",
-        "DomainName": "opportunityhub-frontend-prod.s3.us-east-1.amazonaws.com",
-        "S3OriginConfig": {
-          "OriginAccessIdentity": ""
-        }
-      }
-    ],
-    "Quantity": 1
-  },
-  "DefaultRootObject": "index.html",
-  "DefaultCacheBehavior": {
-    "AllowedMethods": {
-      "Items": ["GET", "HEAD", "OPTIONS"],
-      "Quantity": 3,
-      "CachedMethods": {
-        "Items": ["GET", "HEAD"],
-        "Quantity": 2
-      }
-    },
-    "ViewerProtocolPolicy": "redirect-to-https",
-    "TargetOriginId": "S3Origin",
-    "ForwardedValues": {
-      "QueryString": false,
-      "Cookies": {
-        "Forward": "none"
-      }
-    },
-    "TrustedSigners": {
-      "Enabled": false,
-      "Quantity": 0
-    },
-    "MinTTL": 0,
-    "DefaultTTL": 86400,
-    "MaxTTL": 31536000,
-    "Compress": true
-  },
-  "CacheBehaviors": [
-    {
-      "PathPattern": "/index.html",
-      "AllowedMethods": {
-        "Items": ["GET", "HEAD", "OPTIONS"],
-        "Quantity": 3,
-        "CachedMethods": {
-          "Items": ["GET", "HEAD"],
-          "Quantity": 2
-        }
-      },
-      "ViewerProtocolPolicy": "redirect-to-https",
-      "TargetOriginId": "S3Origin",
-      "ForwardedValues": {
-        "QueryString": false,
-        "Cookies": {
-          "Forward": "none"
-        }
-      },
-      "TrustedSigners": {
-        "Enabled": false,
-        "Quantity": 0
-      },
-      "MinTTL": 0,
-      "DefaultTTL": 0,
-      "MaxTTL": 31536000,
-      "Compress": true
-    }
-  ],
-  "PriceClass": "PriceClass_100",
-  "ViewerCertificate": {
-    "CloudFrontDefaultCertificate": true
-  }
-}
-EOF
+**Option A: Using AWS Console (Easiest)**
 
-# Create distribution
-aws cloudfront create-distribution-with-tags \
-  --distribution-config file://cloudfront-config.json
+1. Go to [AWS CloudFront Console](https://console.aws.amazon.com/cloudfront)
+2. Click "Create Distribution"
+3. Choose origin: `opportunityhub-frontend-prod.s3.us-east-1.amazonaws.com`
+4. Viewer Protocol Policy: `Redirect HTTP to HTTPS`
+5. Default Root Object: `index.html`
+6. Click "Create Distribution"
+7. Wait 5-10 minutes for deployment
+
+**Option B: Using AWS CLI**
+
+```bash
+# Create distribution using CLI (simpler approach)
+aws cloudfront create-distribution \
+  --origin-domain-name opportunityhub-frontend-prod.s3.us-east-1.amazonaws.com \
+  --default-root-object index.html \
+  --comment "OpportunityHub Frontend" \
+  --enabled
 ```
+
+Save the output to get your Distribution ID and domain name.
 
 ### Step 3.6: Get CloudFront URL
 

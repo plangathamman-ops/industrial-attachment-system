@@ -76,6 +76,15 @@ deploy/output/
 deploy/bundle/
 
 # ========================================
+# DEPLOYMENT DOCUMENTATION (LOCAL ONLY)
+# ========================================
+docs/DEPLOYMENT_*.md
+docs/ROUTE53_UPDATE_SUMMARY.md
+docs/README_DEPLOYMENT_COMPLETE.md
+docs/DEPLOYMENT_COMPLETE.txt
+docs/*START_HERE_DEPLOYMENT.md
+
+# ========================================
 # DATABASE & TEMPORARY FILES
 # ========================================
 *.sqlite

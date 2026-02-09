@@ -259,7 +259,7 @@ const Home = () => {
             {[
               { icon: '🔒', title: '100% Verified', description: 'Every company is thoroughly vetted. No scams, only legitimate opportunities.' },
               { icon: '⚡', title: 'Lightning Fast', description: 'Apply in seconds with your saved profile. Get responses within 24-48 hours.' },
-              { icon: '💰', title: 'Best Value', description: 'Only KSh 329 per application. No subscriptions, no hidden fees.' },
+              { icon: '💰', title: 'Best Value', description: 'Only KSh 350 per application. No subscriptions, no hidden fees.' },
               { icon: '🎯', title: '24/7 Support', description: 'Real humans ready to help. Chat, email, or phone support anytime.' }
             ].map((reason, i) => (
               <div key={i} className="card text-center">
